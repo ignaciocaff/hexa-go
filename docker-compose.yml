@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+   api:
+     image: api
+     restart: unless-stopped
+     container_name: api
+     ports:
+        - "3105"
+     networks:
+       - network_api
+networks:
+    network_api:
+        external:
+            name: network_api
